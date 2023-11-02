@@ -29,10 +29,7 @@ public class SecurityConfiguration {
         http.csrf((csrf) -> csrf.disable())
                 .cors().and()
                 .authorizeHttpRequests((auth) ->
-                        auth.requestMatchers(
-                                "/api/**",
-                                        "/user/email/**"
-                                        ,"/complaint/**"
+                        auth.requestMatchers("/api/**","/user/email/**","/complaint/**"
                                 ).permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement((session) ->

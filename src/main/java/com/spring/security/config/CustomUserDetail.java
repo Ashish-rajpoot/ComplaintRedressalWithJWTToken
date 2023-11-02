@@ -1,12 +1,9 @@
 package com.spring.security.config;
 
 import com.spring.security.entity.User;
-import com.spring.security.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,8 +12,6 @@ import java.util.stream.Collectors;
 
 public class CustomUserDetail implements UserDetails {
 
-    @Autowired
-    UserRepository userRepository;
     private String username;
     private String password;
     private List<GrantedAuthority> authorities;
