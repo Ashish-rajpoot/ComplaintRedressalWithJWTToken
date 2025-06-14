@@ -14,7 +14,9 @@
 	<name>springsecurity</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+<!--		<java.version>17</java.version>-->
+		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -50,6 +52,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.28</version>
 		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>12.6.1.jre11</version> <!-- Use version compatible with your Java -->
+		</dependency>
+
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>

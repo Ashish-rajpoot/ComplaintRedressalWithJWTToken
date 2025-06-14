@@ -18,7 +18,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/complaint/")
-public class ComplaintController {
+public class
+ComplaintController {
 
     private final RoleServiceImp roleServiceImp;
     private final UserServiceImp userServiceImp;
